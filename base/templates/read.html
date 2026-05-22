@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block home %}
+<h1>{{home.title}}</h1>
+
+<img src="{{home.image}}" alt="">
+<p>{{home.desc}}</p>
+<div class="rem">
+    <button onclick="history.back()">
+        ← Back
+    </button>
+</div>
+
+
+{% endblock %}

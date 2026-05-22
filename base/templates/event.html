@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block home %}
+<h1>Event Page</h1>
+{% if event %}
+{% for events in event %}
+<h1>{{events.title}}</h1>
+<img src="{{events.image}}" alt="">
+<p>{{events.desc}}</p>
+{% endfor %}
+{% else %}
+<h1>No Content Available</h1>
+{% endif %}
+{% endblock %}

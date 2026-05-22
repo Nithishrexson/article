@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block home %}
+<h1>News Page</h1>
+{% if news %}
+{% for new in news %}
+<h1>{{new.title}}</h1>
+<img src="{{new.image}}" alt="">
+<p>{{new.desc}}</p>
+{% endfor %}
+{% else %}
+<h1>No Content Available</h1>
+{% endif %}
+{% endblock %}

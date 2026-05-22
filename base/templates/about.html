@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block home %}
+
+{% for about in abouts %}
+    <h1>{{about.title}}</h1>
+    {% if about.image %}
+    <img src="{{about.image}}" alt="">
+    {% endif %}
+    <p>{{about.desc}}</p>
+{% endfor %}
+{% endblock %}

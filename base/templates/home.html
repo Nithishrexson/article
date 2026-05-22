@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block home %}
+<h1>Home Page</h1>
+{% if front %}
+{% for i in  front %}
+
+<h2>{{i.title}}</h2>
+<h2>{{i.desc|truncatewords:3}}</h2>
+<a href="{% url 'read' i.id %}">read more</a>
+
+{% endfor %}
+
+{% else %}
+<h1>No Content Available</h1>
+
+{% endif %}
+{% endblock %}
